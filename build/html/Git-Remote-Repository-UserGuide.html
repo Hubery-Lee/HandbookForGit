@@ -1,0 +1,274 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Hubery-Lee
+ * @Date: 2021-02-09 00:07:48
+ * @E-mail: hrbeulh@126.com
+ * @LastEditors: Hubery-Lee
+ * @LastEditTime: 2021-02-09 00:07:58
+-->
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>git remote repository Using &mdash; How2UseGit v1.0 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="title: Git简易使用笔记 date: 2018-09-01 18:49:17 tags: [git] categories: 编程工具学习与应用 description: how to use of git" href="GitUserGuide.html" />
+    <link href="_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> How2UseGit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Git-VS-SVN.html">Git和SVN主要差别</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GitBasic.html">Git基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GitUserGuide.html">title: Git简易使用笔记
+date: 2018-09-01 18:49:17
+tags: [git]
+categories: 编程工具学习与应用
+description: how to use of git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GitUserGuide.html#id1">创建仓库</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GitUserGuide.html#id2">软件仓库下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GitUserGuide.html#id3">软件仓库的快照</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GitUserGuide.html#id4">远程软件仓库的提取</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GitUserGuide.html#id5">远程软件仓库的上传</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GitUserGuide.html#id6">获取软件仓库更改历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GitUserGuide.html#id7">回滚到软件仓库的历史版本</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">git remote repository Using</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">查看远程仓库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">添加远程仓库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">远程仓库抓取数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">推送数据到远程仓库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">查看远程仓库信息</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">How2UseGit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>git remote repository Using</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Git-Remote-Repository-UserGuide.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="git-remote-repository-using">
+<h1>git remote repository Using<a class="headerlink" href="#git-remote-repository-using" title="永久链接至标题">¶</a></h1>
+<p><a class="reference external" href="https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8">reference site</a></p>
+<div class="section" id="id1">
+<h2>查看远程仓库<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git remote  <span class="c1">#显示仓库信息</span>
+$ git remote --version <span class="c1">#显示对应的克隆地址</span>
+$ git remote -v   <span class="c1">#显示对应的克隆地址</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>添加远程仓库<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git remote add pb git://github.com/paulboone/ticgit.git  <span class="c1">#git remote add [shortname] [url]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>远程仓库抓取数据<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git fetch pb <span class="c1"># git fetch [remote-name]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>推送数据到远程仓库<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git push origin master <span class="c1">#git push [remote-name] [branch-name]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>查看远程仓库信息<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git remote show origin  <span class="c1">#git remote show [remote-name] </span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="GitUserGuide.html" class="btn btn-neutral float-left" title="title: Git简易使用笔记 date: 2018-09-01 18:49:17 tags: [git] categories: 编程工具学习与应用 description: how to use of git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2021, Hubery Lee.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

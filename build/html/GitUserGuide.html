@@ -1,0 +1,576 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Hubery-Lee
+ * @Date: 2021-02-09 00:07:48
+ * @E-mail: hrbeulh@126.com
+ * @LastEditors: Hubery-Lee
+ * @LastEditTime: 2021-02-09 00:07:58
+-->
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>创建仓库 &mdash; How2UseGit v1.0 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="git remote repository Using" href="Git-Remote-Repository-UserGuide.html" />
+    <link rel="prev" title="Git基础" href="GitBasic.html" />
+    <link href="_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> How2UseGit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Git-VS-SVN.html">Git和SVN主要差别</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GitBasic.html">Git基础</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">创建仓库</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id2">软件仓库下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id3">软件仓库的快照</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#git">git的日常使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gittagbranch">git中tag和branch的使用</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#id4">远程软件仓库的提取</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id5">远程软件仓库的上传</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id6">获取软件仓库更改历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id7">回滚到软件仓库的历史版本</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Git-Remote-Repository-UserGuide.html">git remote repository Using</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">How2UseGit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>创建仓库</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/GitUserGuide.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>创建仓库<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>采用git init 在目录创建新的仓库</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir newrepository  <span class="c1">#</span>
+$ <span class="nb">cd</span> newrepository
+$ git init
+</pre></div>
+</div>
+<p>或者直接采用 git init 仓库名</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git init newrepository
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h1>软件仓库下载<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
+<p>下载仓库 git clone 拷贝到本地</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ get clone <span class="o">[</span>url<span class="o">]</span>
+</pre></div>
+</div>
+<p>例如，从我的github上下载代码到本地</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ get clone https://github.com/Hubery-Lee/LeeEmacs-setting
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h1>软件仓库的快照<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h1>
+<div class="section" id="git">
+<h2>git的日常使用<a class="headerlink" href="#git" title="永久链接至标题">¶</a></h2>
+<p>git 的日常使用过程</p>
+<p>{% asset_img 1.jpg 日常使用原理 %}</p>
+<p>git add 命令可将文件添加到缓存()
+git status 查看添加到缓存的文件状态 -s 简短结果输出</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ touch README
+$ touch hello.php
+$ ls
+README        hello.php
+$ git status -s
+?? README
+?? hello.php
+
+$ git add README hello.php 
+
+$ git status -s
+A  README
+A  hello.php
+$ 
+
+在 README 添加以下内容：# Runoob Git 测试，然后保存退出。
+
+$ <span class="nb">echo</span> <span class="s2">&quot;# Runoob Git&quot;</span>&gt;&gt;README 
+$ git status -s
+AM README
+A  hello.php
+
+$ git add .
+$ git status -s
+A  README
+A  hello.php
+</pre></div>
+</div>
+<p>执行 git diff 来查看执行 git status 的结果的详细信息。</p>
+<p>git diff 命令显示已写入缓存与已修改但尚未写入缓存的改动的区别。git diff 有两个主要的应用场景。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>尚未缓存的改动：git diff
+查看已缓存的改动： git diff --cached
+查看已缓存的与未缓存的所有改动：git diff HEAD
+显示摘要而非整个 diff：git diff --stat
+</pre></div>
+</div>
+<p>git status 显示你上次提交更新后的更改或者写入缓存的改动， 而 git diff 一行一行地显示这些改动具体是啥。</p>
+<p>接下来我们来查看下 git diff –cached 的执行效果：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>在 hello.php 文件中输入以下内容：
+&lt;?php
+<span class="nb">echo</span> <span class="s1">&#39;菜鸟教程：www.runoob.com&#39;</span><span class="p">;</span>
+?&gt;
+
+$ git status -s
+A  README
+AM hello.php
+$ git diff
+diff --git a/hello.php b/hello.php
+index e69de29..69b5711 <span class="m">100644</span>
+--- a/hello.php
++++ b/hello.php
+@@ -0,0 +1,3 @@
++&lt;?php
++echo <span class="s1">&#39;菜鸟教程：www.runoob.com&#39;</span><span class="p">;</span>
++?&gt;
+
+$ git add hello.php 
+$ git status -s
+A  README
+A  hello.php
+$ git diff --cached
+diff --git a/README b/README
+new file mode <span class="m">100644</span>
+index <span class="m">0000000</span>..8f87495
+--- /dev/null
++++ b/README
+@@ -0,0 +1 @@
++# Runoob Git 测试
+diff --git a/hello.php b/hello.php
+new file mode <span class="m">100644</span>
+index <span class="m">0000000</span>..69b5711
+--- /dev/null
++++ b/hello.php
+@@ -0,0 +1,3 @@
++&lt;?php
++echo <span class="s1">&#39;菜鸟教程：www.runoob.com&#39;</span><span class="p">;</span>
++?&gt;
+</pre></div>
+</div>
+<p>git commit 将缓存区内容添加到仓库中</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> 配置用户名和邮箱地址
+$ git config --global user.name <span class="s1">&#39;runoob&#39;</span>
+$ git config --global user.email test@runoob.com
+</pre></div>
+</div>
+<p>提交缓存到仓库</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git commit -m <span class="s1">&#39;第一次版本提交&#39;</span>
+<span class="o">[</span>master <span class="o">(</span>root-commit<span class="o">)</span> d32cf1f<span class="o">]</span> 第一次版本提交
+ <span class="m">2</span> files changed, <span class="m">4</span> insertions<span class="o">(</span>+<span class="o">)</span>
+ create mode <span class="m">100644</span> README
+ create mode <span class="m">100644</span> hello.php
+
+$ git status
+<span class="c1"># On branch master</span>
+nothing to commit <span class="o">(</span>working directory clean<span class="o">)</span>
+</pre></div>
+</div>
+<p>git reset HEAD 命令用于取消已缓存的内容。
+同时修改README和hello.php,然后撤销hello.php的缓存</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git status -s
+ M README
+ M hello.php
+$ git add .
+$ git status -s
+M  README
+M  hello.pp
+$ git reset HEAD hello.php 
+Unstaged changes after reset:
+M    hello.php
+$ git status -s
+M  README
+ M hello.php
+
+$ git commit -m <span class="s1">&#39;修改&#39;</span>
+<span class="o">[</span>master f50cfda<span class="o">]</span> 修改
+ <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>
+$ git status -s
+ M hello.php
+</pre></div>
+</div>
+<p>仍然可以再次提交hello.php修改的内容</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git commit -am <span class="s1">&#39;修改 hello.php 文件&#39;</span>
+<span class="o">[</span>master 760f74d<span class="o">]</span> 修改 hello.php 文件
+ <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>
+$ git status
+On branch master
+nothing to commit, working directory clean
+</pre></div>
+</div>
+<p>简而言之，执行 git reset HEAD 以取消之前 git add 添加，但不希望包含在下一提交快照中的缓存。</p>
+<p>git rm
+如果只是简单地从工作目录中手工删除文件，运行 git status 时就会在 Changes not staged for commit 的提示。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git rm &lt;file&gt;
+$ git rm -f  &lt;file&gt;
+$ git rm -r &lt;file&gt;
+$ git rm --cached &lt;file&gt;
+类似有git mv 移动和重命名
+$ git mv README  README.md
+</pre></div>
+</div>
+<p>要从 Git 中移除某个文件，就必须要从已跟踪文件清单中移除，然后提交。可以用以下命令完成此项工作</p>
+</div>
+<div class="section" id="gittagbranch">
+<h2>git中tag和branch的使用<a class="headerlink" href="#gittagbranch" title="永久链接至标题">¶</a></h2>
+<p>{% asset_img 2.png tag和branch %}</p>
+<p>创建分支、列出分支、切换分支、删除分支</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git branch testing <span class="c1">#创建testing分支</span>
+$ git branch   <span class="c1">#列出分支</span>
+* master
+  testing
+
+$ git checkout testing
+Switched to branch <span class="s1">&#39;testing&#39;</span>
+
+$ git checkout master
+Switched to branch <span class="s1">&#39;master&#39;</span>
+
+$ git checkout -b newtest  <span class="c1">#创建newtest分支并切换到该分支</span>
+Switched to a new branch <span class="s1">&#39;newtest&#39;</span>
+
+$ git branch -d testing  <span class="c1">#删除testing分支</span>
+Deleted branch testing <span class="o">(</span>was 85fc7e7<span class="o">)</span>.
+
+$ git branch  
+* master
+  newtest
+
+$ git merge newtest     <span class="c1">#将newtest分支合并到master分支</span>
+Updating 2e082b7..556f0a0
+Fast-forward
+ test2.txt <span class="p">|</span> <span class="m">1</span> -
+ <span class="m">1</span> file changed, <span class="m">1</span> deletion<span class="o">(</span>-<span class="o">)</span>
+ delete mode <span class="m">100644</span> test2.txt
+</pre></div>
+</div>
+<p>当同时记录到master的修改和branch分支的修改时，会出现合并分支冲突
+手动修改冲突部分
+采用git add 告诉git文件冲突已经解决；</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git merge change_site
+Auto-merging test.txt
+CONFLICT <span class="o">(</span>content<span class="o">)</span>: Merge conflict in test.txt
+Automatic merge failed<span class="p">;</span> fix conflicts and <span class="k">then</span> commit the result.
+$ cat test.txt 
+<span class="o">&lt;&lt;&lt;&lt;&lt;&lt;</span>&lt; HEAD
+runoob.com
+<span class="nv">新增加一行</span>
+<span class="o">=======</span>
+www.runoob.com
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; change_site
+
+$ vim test.txt 
+$ cat test.txt 
+www.runoob.com
+新增加一行
+$ git diff
+diff --cc test.txt
+index f84c2a4,bccb7c2..0000000
+--- a/test.txt
++++ b/test.txt
+@@@ -1,2 -1,1 +1,2 @@@
+- runoob.com
++ www.runoob.com
+ +新增加一行
+
+$ git status -s
+UU test.txt
+$ git add test.txt 
+$ git status -s
+M  test.txt
+$ git commit
+<span class="o">[</span>master 88afe0e<span class="o">]</span> Merge branch <span class="s1">&#39;change_site&#39;</span>
+</pre></div>
+</div>
+<p>查看提交历史</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git log  <span class="c1">#详细提交历史</span>
+$ git log --oneline  <span class="c1">#简洁提交历史</span>
+$ git log --oneline --graph  <span class="c1">#--graph开启了拓扑图选项</span>
+$ git log --reverse --oneline <span class="c1">#用 &#39;--reverse&#39;参数来逆向显示所有日志。</span>
+$ git log --author<span class="o">=</span>Linus --oneline -5 <span class="c1">#--author查找指定用户提交的记录</span>
+$ git log --oneline --before<span class="o">={</span><span class="m">3</span>.weeks.ago<span class="o">}</span> --after<span class="o">={</span><span class="m">2010</span>-04-18<span class="o">}</span> --no-merges#指定日期，可以执行几个选项：--since 和 --before，但是你也可以用 --until 和 --after --no-merges 选项以隐藏合并提交
+</pre></div>
+</div>
+<p>标签
+写一句标签注解，就像你给提交写注解一样。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git tag -a v1.0 
+$ git log --oneline --decorate --graph  <span class="c1">#执行 git log --decorate 时，可以看到标签</span>
+$ git tag -a v0.9 85fc7e7       <span class="c1">#给提交代码85fc7e7追加标签</span>
+$ git log --oneline --decorate --graph
+*   88afe0e <span class="o">(</span>HEAD, tag: v1.0, master<span class="o">)</span> Merge branch <span class="s1">&#39;change_site&#39;</span>
+<span class="p">|</span><span class="se">\ </span> 
+<span class="p">|</span> * d7e7346 <span class="o">(</span>change_site<span class="o">)</span> changed the site
+* <span class="p">|</span> 14b4dca 新增加一行
+<span class="p">|</span>/  
+* 556f0a0 removed test2.txt
+* 2e082b7 add test2.txt
+* 048598f add test.txt
+* 85fc7e7 <span class="o">(</span>tag: v0.9<span class="o">)</span> <span class="nb">test</span> comment from runoob.com
+
+$ git tag  <span class="c1">#查看所有标签</span>
+v0.9
+v1.0
+
+$ git tag -a &lt;tagname&gt; -m <span class="s2">&quot;runoob.com标签&quot;</span>  <span class="c1">#指定标签信息命令</span>
+$ git tag -s &lt;tagname&gt; -m <span class="s2">&quot;runoob.com标签&quot;</span>  <span class="c1">#PGP签名标签命令</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h1>远程软件仓库的提取<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git remote   <span class="c1">#查看远程仓库</span>
+origin
+$ git remote -v  <span class="c1">#-v 参数，可以看到每个别名的实际链接地址。</span>
+origin    git@github.com:tianqixin/runoob-git-test.git <span class="o">(</span>fetch<span class="o">)</span>
+origin    git@github.com:tianqixin/runoob-git-test.git <span class="o">(</span>push<span class="o">)</span>
+
+$ git fetch <span class="o">[</span>alias<span class="o">]</span> <span class="c1">#从远程仓库下载分支和数据</span>
+$ git fetch origin  <span class="c1">#从远程仓库下载origin分支和数据</span>
+remote: Counting objects: <span class="m">3</span>, <span class="k">done</span>.
+remote: Compressing objects: <span class="m">100</span>% <span class="o">(</span><span class="m">2</span>/2<span class="o">)</span>, <span class="k">done</span>.
+remote: Total <span class="m">3</span> <span class="o">(</span>delta <span class="m">0</span><span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta <span class="m">0</span><span class="o">)</span>, pack-reused <span class="m">0</span>
+Unpacking objects: <span class="m">100</span>% <span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>, <span class="k">done</span>.
+From github.com:tianqixin/runoob-git-test
+   0205aab..febd8ed  master     -&gt; origin/master
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h1>远程软件仓库的上传<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git merge <span class="o">[</span>alias<span class="o">]</span>/<span class="o">[</span>branch<span class="o">]</span> <span class="c1">#以将服务器上的任何更新合并到你的当前分支</span>
+$ git merge origin/master  <span class="c1">#从远端仓库提取数据并尝试合并到当前分支</span>
+Updating 0205aab..febd8ed
+Fast-forward
+ README.md <span class="p">|</span> <span class="m">1</span> +
+ <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>
+
+$ git push <span class="o">[</span>alias<span class="o">]</span> <span class="o">[</span>branch<span class="o">]</span> <span class="c1">#推送你的新分支与数据到某个远端仓库</span>
+$ git push origin master    <span class="c1"># 推送到 Github</span>
+
+git remote rm  <span class="o">[</span>alias<span class="o">]</span>
+git remote mv <span class="o">[</span>aliasA<span class="o">]</span> <span class="o">[</span>aliasB<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h1>获取软件仓库更改历史<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git status
+$ git status -s
+$ git diff 
+$ git diff --cached
+$ git log  <span class="c1">#详细提交历史</span>
+$ git log --oneline  <span class="c1">#简洁提交历史</span>
+$ git log --oneline --graph  <span class="c1">#--graph开启了拓扑图选项</span>
+$ git log --reverse --oneline <span class="c1">#用 &#39;--reverse&#39;参数来逆向显示所有日志。</span>
+$ git log --author<span class="o">=</span>Linus --oneline -5 <span class="c1">#--author查找指定用户提交的记录</span>
+$ git log --oneline --before<span class="o">={</span><span class="m">3</span>.weeks.ago<span class="o">}</span> --after<span class="o">={</span><span class="m">2010</span>-04-18<span class="o">}</span> --no-merges#指定日期，可以执行几个选项：--since 和 --before，但是你也可以用 --until 和 --after --no-merges 选项以隐藏合并提交
+
+$ git branch
+$ git tag
+$ git remote
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h1>回滚到软件仓库的历史版本<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git reset 
+$ git reset HEAD <span class="o">[</span>file<span class="o">]</span>
+$ git reset --hard &lt;target_commit_id&gt;
+$ git reset --soft origin/source 命令（source 分支）
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="Git-Remote-Repository-UserGuide.html" class="btn btn-neutral float-right" title="git remote repository Using" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="GitBasic.html" class="btn btn-neutral float-left" title="Git基础" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2021, Hubery Lee.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

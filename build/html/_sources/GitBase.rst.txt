@@ -1,0 +1,23 @@
+
+git 基础操作
+=============
+
+主要命令
+-------------
+
+- git commit
+- git branch
+- git merge
+
+合并
+++++++++++++
+
+** git merge **
+
+.. image:: _static\Screenshot 2021-02-09 115424.png
+.. image:: _static\Screenshot 2021-02-09 115614.png
+.. image:: _static\Screenshot 2021-02-09 115703.png
+.. image:: _static\Screenshot 2021-02-09 115740.png
+
+
+
