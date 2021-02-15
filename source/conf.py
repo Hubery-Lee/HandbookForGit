@@ -5,7 +5,7 @@ Author: Hubery-Lee
 Date: 2021-02-09 11:23:36
 E-mail: hrbeulh@126.com
 LastEditors: Hubery-Lee
-LastEditTime: 2021-02-09 11:40:02
+LastEditTime: 2021-02-15 23:54:15
 '''
 # Configuration file for the Sphinx documentation builder.
 #
@@ -40,15 +40,15 @@ release = 'v1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['recommonmark', 'sphinx.ext.autodoc',
-  'rst2pdf.pdfbuilder'
+  #'rst2pdf.pdfbuilder'
 ]
 
-pdf_documents = [
-  ('index', 'rst2pdf', 'HandBook for Git', 'Hubery Lee(李会)'),
-]
+# pdf_documents = [
+#   ('index', 'rst2pdf', 'HandBook for Git', 'Hubery Lee(李会)'),
+# ]
  
 # A comma-separated list of custom stylesheets. Example:
-pdf_stylesheets = ['a3','chinese']
+# pdf_stylesheets = ['a3','chinese']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
